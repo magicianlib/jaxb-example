@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<generatorConfiguration>
+    <table tableName="order_paid_receipt_config" domainObjectName="OrderPaidReceiptConfig">
+        <property column="username" property="Username" javaType="java.lang.String"/>
+        <property column="deleted" property="Deleted" javaType="java.lang.Integer"/>
+    </table>
+    <table tableName="order_flight" domainObjectName="OrderFlight"/>
+</generatorConfiguration>
