@@ -37,7 +37,7 @@ public class MarshallerTest {
             marshaller.setProperty(Marshaller.JAXB_FRAGMENT, false);        //  是否禁止生成 <?xml version="1.0"?>
             marshaller.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");      // 设置生成的 XML 的字符编码
 
-            System.out.println("marshal XML:");
+            System.out.println("Marshal XML:");
             marshaller.marshal(configuration, writer);
             System.out.println(writer);
 

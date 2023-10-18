@@ -1,7 +1,5 @@
 package io.magicianlib;
 
-import io.magicianlib.nest.GeneratorConfiguration;
-
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
 import javax.xml.stream.XMLOutputFactory;
@@ -27,6 +25,10 @@ import javax.xml.stream.XMLStreamWriter;
  */
 public class XMLOutputFactoryTest {
     public static void main(String[] args) {
+        generateXml(TestData.getData());
+    }
+
+    public static <T> void generateXml(T obj) {
         try {
             XMLStreamWriter writer = XMLOutputFactory.newFactory().createXMLStreamWriter(System.out, "UTF-8");
 
@@ -34,10 +36,10 @@ public class XMLOutputFactoryTest {
             writer.writeStartDocument("UTF-8", "1.0");
 
             // 使用marshaller生成XML中间部分内容
-            JAXBContext context = JAXBContext.newInstance(GeneratorConfiguration.class);
+            JAXBContext context = JAXBContext.newInstance(obj.getClass());
             Marshaller marshaller = context.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FRAGMENT, true); // 已经自定义XML头元素了, 这里不需要重复生成了
-            marshaller.marshal(TestData.getData(), writer); // 生成中间元素
+            marshaller.marshal(obj, writer); // 生成中间元素
 
             // 生成XML尾元素
             writer.writeEndDocument();
