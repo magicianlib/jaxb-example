@@ -1,4 +1,4 @@
-package io.magicianlib.xml;
+package io.magicianlib.nest;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -58,5 +58,14 @@ public class Property {
 
     public void setJavaType(String javaType) {
         this.javaType = javaType;
+    }
+
+    @Override
+    public String toString() {
+        return "Property{" +
+                "column='" + column + '\'' +
+                ", property='" + property + '\'' +
+                ", javaType='" + javaType + '\'' +
+                '}';
     }
 }

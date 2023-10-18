@@ -1,4 +1,4 @@
-package io.magicianlib.xml;
+package io.magicianlib.nest;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -47,5 +47,12 @@ public class GeneratorConfiguration {
 
     public void setTables(List<Table> tables) {
         this.tables = tables;
+    }
+
+    @Override
+    public String toString() {
+        return "GeneratorConfiguration{" +
+                "tables=" + tables +
+                '}';
     }
 }
