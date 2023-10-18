@@ -34,7 +34,7 @@ public class Main {
             JAXBContext context = JAXBContext.newInstance(GeneratorConfiguration.class);
             Marshaller marshaller = context.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true); // 格式化输出
-            marshaller.setProperty(Marshaller.JAXB_FRAGMENT, false);        // 不生成XML文档的声明部分 <?xml version="1.0"?>
+            marshaller.setProperty(Marshaller.JAXB_FRAGMENT, false);        // 生成XML文档的声明部分 <?xml version="1.0"?>
             marshaller.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");      // 设置生成的 XML 的字符编码
 
             System.out.println("marshal XML:");
