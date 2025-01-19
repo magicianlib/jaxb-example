@@ -11,7 +11,7 @@
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <sun-jaxb.version>4.0.3</sun-jaxb.version>
+        <sun-jaxb.version>4.0.5</sun-jaxb.version>
     </properties>
 
     <dependencies>

@@ -1,9 +1,9 @@
 package io.magicianlib;
 
 import io.magicianlib.nest.GeneratorConfiguration;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.Marshaller;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Marshaller;
 import java.io.StringWriter;
 
 /**
